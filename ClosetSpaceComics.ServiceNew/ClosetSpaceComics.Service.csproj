@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E147C2A6-FBCA-4A8A-BD19-4960D3EFB0BD}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>ClosetSpaceComics.ServiceNew</RootNamespace>
+    <AssemblyName>ClosetSpaceComics.ServiceNew</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack, Version=1.11.17.0, Culture=neutral, PublicKeyToken=bd319b19eaf3b43a, processorArchitecture=MSIL">
+      <HintPath>..\packages\HtmlAgilityPack.1.11.17\lib\Net45\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.9.3.3\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=10.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.10.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Class1.cs" />
+    <Compile Include="Code\CommonCode.cs" />
+    <Compile Include="Code\Scraper\Scraper.cs" />
+    <Compile Include="HelperMethods\Scraper.cs" />
+    <Compile Include="Migrations\201911271655522_syncup.cs" />
+    <Compile Include="Migrations\201911271655522_syncup.Designer.cs">
+      <DependentUpon>201911271655522_syncup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912032052359_turnOnIdentityInCatalog.cs" />
+    <Compile Include="Migrations\201912032052359_turnOnIdentityInCatalog.Designer.cs">
+      <DependentUpon>201912032052359_turnOnIdentityInCatalog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912070302507_publisherImage.cs" />
+    <Compile Include="Migrations\201912070302507_publisherImage.Designer.cs">
+      <DependentUpon>201912070302507_publisherImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912082017503_publisherdisplayorder.cs" />
+    <Compile Include="Migrations\201912082017503_publisherdisplayorder.Designer.cs">
+      <DependentUpon>201912082017503_publisherdisplayorder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912111752339_TurningIdentityOff.cs" />
+    <Compile Include="Migrations\201912111752339_TurningIdentityOff.Designer.cs">
+      <DependentUpon>201912111752339_TurningIdentityOff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912120130235_restoreIdentity.cs" />
+    <Compile Include="Migrations\201912120130235_restoreIdentity.Designer.cs">
+      <DependentUpon>201912120130235_restoreIdentity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912180241080_purchaseitemrefs.cs" />
+    <Compile Include="Migrations\201912180241080_purchaseitemrefs.Designer.cs">
+      <DependentUpon>201912180241080_purchaseitemrefs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912181819363_addtitleids.cs" />
+    <Compile Include="Migrations\201912181819363_addtitleids.Designer.cs">
+      <DependentUpon>201912181819363_addtitleids.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912190031109_localissuenumber.cs" />
+    <Compile Include="Migrations\201912190031109_localissuenumber.Designer.cs">
+      <DependentUpon>201912190031109_localissuenumber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912190103038_addTitleNavDetail.cs" />
+    <Compile Include="Migrations\201912190103038_addTitleNavDetail.Designer.cs">
+      <DependentUpon>201912190103038_addTitleNavDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201912310200599_AddBaseIssueToPurchase.cs" />
+    <Compile Include="Migrations\201912310200599_AddBaseIssueToPurchase.Designer.cs">
+      <DependentUpon>201912310200599_AddBaseIssueToPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002011558460_addFirebaseId.cs" />
+    <Compile Include="Migrations\202002011558460_addFirebaseId.Designer.cs">
+      <DependentUpon>202002011558460_addFirebaseId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202002231421372_issue-created-date.cs" />
+    <Compile Include="Migrations\202002231421372_issue-created-date.Designer.cs">
+      <DependentUpon>202002231421372_issue-created-date.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Entities\NewAppDbContext.cs" />
+    <Compile Include="Entities\AppDbContext.cs" />
+    <Compile Include="Entities\ComicDb\IssueEntity.cs" />
+    <Compile Include="Entities\ComicDb\LocalTitleEntity.cs" />
+    <Compile Include="Entities\ComicDb\PublisherEntity.cs" />
+    <Compile Include="Entities\ComicDb\TitleEntity.cs" />
+    <Compile Include="Entities\User\Locations\Boxes\BoxEntity.cs" />
+    <Compile Include="Entities\User\Locations\LocationEntity.cs" />
+    <Compile Include="Entities\User\Purchases\Enums\ComicConditionEnum.cs" />
+    <Compile Include="Entities\User\Purchases\Enums\GradingConditionEnum.cs" />
+    <Compile Include="Entities\User\Purchases\Enums\GradingPaperQualityEnum.cs" />
+    <Compile Include="Entities\User\Purchases\Enums\GradingServiceEnum.cs" />
+    <Compile Include="Entities\User\Purchases\PurchaseItems\Photos\PhotoEntity.cs" />
+    <Compile Include="Entities\User\Purchases\PurchaseItems\PurchaseItemEntity.cs" />
+    <Compile Include="Entities\User\Purchases\PurchaseEntity.cs" />
+    <Compile Include="Entities\User\UserEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\IMigrationRepository.cs" />
+    <Compile Include="Repositories\Issue\IssueCommandRepository.cs" />
+    <Compile Include="Repositories\Issue\IssueQueryRepository.cs" />
+    <Compile Include="Repositories\Location\LocationQueryRepository.cs" />
+    <Compile Include="Repositories\MigrationRepository.cs" />
+    <Compile Include="Repositories\Publisher\PublisherCommandRepository.cs" />
+    <Compile Include="Repositories\Publisher\PublisherQueryRepository.cs" />
+    <Compile Include="Repositories\Purchase\PurchaseCommandRepository.cs" />
+    <Compile Include="Repositories\Purchase\PurchaseQueryRepository.cs" />
+    <Compile Include="Repositories\Title\TitleCommandRepository.cs" />
+    <Compile Include="Repositories\Title\TitleQueryRepository.cs" />
+    <Compile Include="Repositories\User\UserQueryRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClosetSpaceComics.Domain\ClosetSpaceComics.Domain.csproj">
+      <Project>{62E9889D-F480-4686-95B3-ADB74C655381}</Project>
+      <Name>ClosetSpaceComics.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201911271655522_syncup.resx">
+      <DependentUpon>201911271655522_syncup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912032052359_turnOnIdentityInCatalog.resx">
+      <DependentUpon>201912032052359_turnOnIdentityInCatalog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912070302507_publisherImage.resx">
+      <DependentUpon>201912070302507_publisherImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912082017503_publisherdisplayorder.resx">
+      <DependentUpon>201912082017503_publisherdisplayorder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912111752339_TurningIdentityOff.resx">
+      <DependentUpon>201912111752339_TurningIdentityOff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912120130235_restoreIdentity.resx">
+      <DependentUpon>201912120130235_restoreIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912180241080_purchaseitemrefs.resx">
+      <DependentUpon>201912180241080_purchaseitemrefs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912181819363_addtitleids.resx">
+      <DependentUpon>201912181819363_addtitleids.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912190031109_localissuenumber.resx">
+      <DependentUpon>201912190031109_localissuenumber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912190103038_addTitleNavDetail.resx">
+      <DependentUpon>201912190103038_addTitleNavDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201912310200599_AddBaseIssueToPurchase.resx">
+      <DependentUpon>201912310200599_AddBaseIssueToPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002011558460_addFirebaseId.resx">
+      <DependentUpon>202002011558460_addFirebaseId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202002231421372_issue-created-date.resx">
+      <DependentUpon>202002231421372_issue-created-date.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
